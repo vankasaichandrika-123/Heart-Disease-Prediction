@@ -1,0 +1,16 @@
+2026-09-26 14:41:03,766 - INFO - Before X_train column names : Index(['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
+       'exang', 'oldpeak', 'slope', 'ca', 'thal'],
+      dtype='str')
+2026-09-26 14:41:03,766 - INFO - Before X_test column names : Index(['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
+       'exang', 'oldpeak', 'slope', 'ca', 'thal'],
+      dtype='str')
+2026-09-26 14:41:03,966 - INFO - After X_train column names : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'fbs_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str')
+2026-09-26 14:41:03,966 - INFO - After X_test column names : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'fbs_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str')

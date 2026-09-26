@@ -1,0 +1,46 @@
+2026-09-26 14:41:03,966 - INFO - Before constant Technique X_train columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'fbs_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (242, 13)
+2026-09-26 14:41:03,966 - INFO - Before constant Technique X_test columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'fbs_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (61, 13)
+2026-09-26 14:41:03,983 - INFO - Columns to remove in constant technique : Index(['fbs_yeo_trim'], dtype='str')
+2026-09-26 14:41:03,984 - INFO - After constant Technique X_train columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (242, 12)
+2026-09-26 14:41:03,984 - INFO - After constant Technique X_test columns and shape :Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'trestbps_yeo_trim',
+       'chol_yeo_trim', 'restecg_yeo_trim', 'thalach_yeo_trim',
+       'exang_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim', 'ca_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (61, 12)
+2026-09-26 14:41:03,985 - INFO - Columns to remove in quasi constant technique : Index(['trestbps_yeo_trim', 'chol_yeo_trim', 'exang_yeo_trim', 'ca_yeo_trim'], dtype='str')
+2026-09-26 14:41:03,985 - INFO - After Quasi constant Technique X_train columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'restecg_yeo_trim',
+       'thalach_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (242, 8)
+2026-09-26 14:41:03,986 - INFO - After Quasi constant Technique X_test columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'restecg_yeo_trim',
+       'thalach_yeo_trim', 'oldpeak_yeo_trim', 'slope_yeo_trim',
+       'thal_yeo_trim'],
+      dtype='str') : (61, 8)
+2026-09-26 14:41:03,988 - INFO - p_values for each feature:
+2026-09-26 14:41:03,988 - INFO - age_yeo_trim : 0.00031932973432184045
+2026-09-26 14:41:03,988 - INFO - sex_yeo_trim : 1.422851739634094e-06
+2026-09-26 14:41:03,988 - INFO - cp_yeo_trim : 3.3344719050418195e-13
+2026-09-26 14:41:03,988 - INFO - restecg_yeo_trim : 0.1491137249027603
+2026-09-26 14:41:03,988 - INFO - thalach_yeo_trim : 2.292345471130068e-10
+2026-09-26 14:41:03,988 - INFO - oldpeak_yeo_trim : 8.244767290248099e-12
+2026-09-26 14:41:03,988 - INFO - slope_yeo_trim : 1.0437255300569524e-08
+2026-09-26 14:41:03,989 - INFO - thal_yeo_trim : 7.461570224946725e-09
+2026-09-26 14:41:03,989 - INFO - Columns removed based on hypothesis testing : Index(['restecg_yeo_trim'], dtype='str')
+2026-09-26 14:41:03,989 - INFO - After Hypothesis Technique X_train columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'thalach_yeo_trim',
+       'oldpeak_yeo_trim', 'slope_yeo_trim', 'thal_yeo_trim'],
+      dtype='str') : (242, 7)
+2026-09-26 14:41:03,989 - INFO - After Hypothesis Technique X_test columns and shape : Index(['age_yeo_trim', 'sex_yeo_trim', 'cp_yeo_trim', 'thalach_yeo_trim',
+       'oldpeak_yeo_trim', 'slope_yeo_trim', 'thal_yeo_trim'],
+      dtype='str') : (61, 7)

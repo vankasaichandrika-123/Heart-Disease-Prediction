@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 26px;
+        }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 27px;
+            color: #111827;
+        }
+
+        .header p {
+            margin: 0;
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #374151;
+        }
+
+        input {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+        }
+
+        .button {
+            width: 100%;
+            margin-top: 6px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            margin-top: 22px;
+            padding: 16px;
+            border-radius: 8px;
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            text-align: center;
+        }
+
+        .result-label {
+            margin-bottom: 5px;
+            color: #166534;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .result-value {
+            color: #14532d;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .note {
+            margin-top: 20px;
+            color: #6b7280;
+            font-size: 11px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                padding: 14px;
+            }
+
+            .card {
+                padding: 22px;
+            }
+
+            .header h1 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+
+            <div class="header">
+                <h1>Heart Disease Prediction</h1>
+                <p>Enter the required model features to generate a prediction.</p>
+            </div>
+
+            <form method="post">
+
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input
+                        id="age"
+                        type="number"
+                        step="any"
+                        name="age_yeo_trim"
+                        placeholder="Enter age"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="sex">Sex</label>
+                    <input
+                        id="sex"
+                        type="number"
+                        step="any"
+                        name="sex_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cp">Chest Pain Type</label>
+                    <input
+                        id="cp"
+                        type="number"
+                        step="any"
+                        name="cp_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="thalach">Maximum Heart Rate</label>
+                    <input
+                        id="thalach"
+                        type="number"
+                        step="any"
+                        name="thalach_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="oldpeak">ST Depression</label>
+                    <input
+                        id="oldpeak"
+                        type="number"
+                        step="any"
+                        name="oldpeak_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="slope">Slope</label>
+                    <input
+                        id="slope"
+                        type="number"
+                        step="any"
+                        name="slope_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="thal">Thal</label>
+                    <input
+                        id="thal"
+                        type="number"
+                        step="any"
+                        name="thal_yeo_trim"
+                        placeholder="Enter value"
+                        required
+                    >
+                </div>
+
+                <button class="button" type="submit">Predict</button>
+            </form>
+
+            {% if prediction is not none %}
+                <div class="result">
+                    <div class="result-label">Prediction</div>
+                    <div class="result-value">{{ prediction }}</div>
+                </div>
+            {% endif %}
+
+            <div class="note">
+                This prediction interface is intended for machine-learning project use
+                and should not be used as a medical diagnosis.
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
