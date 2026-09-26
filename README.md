@@ -1,8 +1,8 @@
-# Heart-Disease-Prediction
+# ❤️  Heart-Disease-Prediction
 
-**ML Heart Disease Prediction Project
+##ML Heart Disease Prediction Project
 
-1. Project Overview**
+#1. Project Overview
 
 This project is a machine-learning classification pipeline for predicting the target class from a heart-disease dataset.
 
@@ -32,7 +32,7 @@ ROC curve visualization
 
 The project also writes execution details into separate log files under the logs directory.
 
-**2. Dataset Information**
+#2. Dataset Information
 
 The current run contains:
 
@@ -58,7 +58,7 @@ Total: 266
 
 Source: main.log.
 
-**3. Feature Engineering and Selection**
+#3. Feature Engineering and Selection**
 
 Initial features
 
@@ -134,8 +134,8 @@ slope_yeo_trim
 thal_yeo_trim
 
 Source: fs.log.
-**
-4. Models Used**
+
+#4. Models Used
 
 The project evaluates:
 
@@ -157,7 +157,7 @@ XGBoost
 
 The current implementation also creates an ROC curve visualization for these models.
 
-**5. Current Test Results**
+#5. Current Test Results
 
 The following values are from the current all_models.log run.
 
@@ -169,9 +169,9 @@ KNN
 
 57.38%
 
-**Naive Bayes
+#Naive Bayes
 
-80.33%**
+#80.33%
 
 Logistic Regression
 
@@ -199,7 +199,7 @@ XGBoost
 
 The current logs therefore show different performance across the tested models. These are test-set measurements from this particular run and should not be interpreted as general clinical performance.
 
-**6. Naive Bayes Result**
+#6. Naive Bayes Result
 
 The current Naive Bayes test result contains:
 
@@ -221,7 +221,7 @@ accuracy                              0.80        61
 macro avg          0.81       0.81      0.80        61
 weighted avg       0.81       0.80      0.80        61
 
-**7. ROC Curve**
+#7. ROC Curve
 
 The project currently generates an ROC visualization containing curves for:
 
@@ -245,8 +245,8 @@ predict_proba(X_test)[:, 1]
 for models that support probability prediction, or an appropriate decision score for models that do not.
 
 The current graph should therefore be treated as the visualization produced by the existing implementation, not as a complete set of validated ROC-AUC values.
-**
-8. Logging**
+
+#8. Logging
 
 Logs are stored in:
 
@@ -311,7 +311,7 @@ Classification report
 
 ROC/AUC stage information
 
-**9. Project Structure**
+#9. Project Structure
 
 A recommended structure is:
 
@@ -340,8 +340,8 @@ ML_HEART_project/
 If Flask is being used, the HTML file should normally be placed under:
 
 templates/index.html
-**
-10. Running the Project**
+
+#10. Running the Project
 
 From the project directory:
 
@@ -350,7 +350,7 @@ python main.py
 
 The machine-learning pipeline should then generate/update the log files.
 
-**11. Prediction UI**
+#11. Prediction UI
 
 The included index.html provides a simple web form for the final seven model-input features:
 
@@ -366,7 +366,7 @@ These are the final transformed features recorded by the feature-selection pipel
 
 Do not enter raw clinical values into these fields unless the backend explicitly performs the required Yeo-Johnson transformation before prediction.
 
-**12. Important Medical Disclaimer**
+#12. Important Medical Disclaimer
 
 This is a machine-learning project for technical/educational use. A model prediction is not a medical diagnosis and should not be used by itself to make healthcare decisions.
 
